@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Insights Hub</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+}
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+#progressBar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:5px;
+    background:#06b6d4;
+    width:0%;
+    z-index:999;
+}
+
+.dark{
+    background:#0f172a;
+    color:white;
+}
+</style>
+</head>
+
+<body class="bg-gray-100">
+
+<div id="progressBar"></div>
+
+<!-- Navbar -->
+<nav class="bg-white shadow sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+<h1 class="text-2xl font-bold text-cyan-600">
+AI Insights Hub
+</h1>
+
+<div class="space-x-5 hidden md:block">
+<a href="#" class="hover:text-cyan-600">Home</a>
+<a href="#blog" class="hover:text-cyan-600">Blog</a>
+<a href="#tools" class="hover:text-cyan-600">Tools</a>
+<a href="#about" class="hover:text-cyan-600">About</a>
+<a href="#contact" class="hover:text-cyan-600">Contact</a>
+</div>
+
+<button id="themeBtn" class="bg-cyan-500 text-white px-3 py-2 rounded">
+<i class="fas fa-moon"></i>
+</button>
+
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="text-center py-20 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
+<h1 class="text-5xl font-bold mb-4">
+Explore Artificial Intelligence
+</h1>
+
+<p class="text-xl mb-8">
+Latest AI News, Tutorials and Tools
+</p>
+
+<a href="#blog"
+class="bg-white text-cyan-600 px-6 py-3 rounded-lg font-bold">
+Read Articles
+</a>
+</section>
+
+<!-- Featured Blogs -->
+<section id="blog" class="max-w-7xl mx-auto py-16 px-4">
+
+<h2 class="text-3xl font-bold mb-10">
+Featured Articles
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card bg-white rounded-lg shadow overflow-hidden">
+<img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80">
+<div class="p-5">
+<h3 class="font-bold text-xl mb-3">
+Future of Generative AI
+</h3>
+<p>
+Learn how AI is transforming industries.
+</p>
+<button class="mt-4 bg-cyan-500 text-white px-4 py-2 rounded">
+Read More
+</button>
+</div>
+</div>
+
+<div class="card bg-white rounded-lg shadow overflow-hidden">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e">
+<div class="p-5">
+<h3 class="font-bold text-xl mb-3">
+Machine Learning Basics
+</h3>
+<p>
+A beginner guide to machine learning.
+</p>
+<button class="mt-4 bg-cyan-500 text-white px-4 py-2 rounded">
+Read More
+</button>
+</div>
+</div>
+
+<div class="card bg-white rounded-lg shadow overflow-hidden">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="p-5">
+<h3 class="font-bold text-xl mb-3">
+AI Tools in 2026
+</h3>
+<p>
+Top AI tools everyone should know.
+</p>
+<button class="mt-4 bg-cyan-500 text-white px-4 py-2 rounded">
+Read More
+</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- AI Tools -->
+<section id="tools" class="bg-gray-200 py-16">
+
+<div class="max-w-7xl mx-auto px-4">
+
+<h2 class="text-3xl font-bold mb-10">
+Trending AI Tools
+</h2>
+
+<div class="grid md:grid-cols-4 gap-6">
+
+<div class="bg-white p-6 rounded-lg shadow">
+<h3 class="font-bold text-xl">ChatGPT</h3>
+<p>AI assistant for writing and coding.</p>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow">
+<h3 class="font-bold text-xl">Claude</h3>
+<p>Long context reasoning assistant.</p>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow">
+<h3 class="font-bold text-xl">Gemini</h3>
+<p>Google AI productivity tool.</p>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow">
+<h3 class="font-bold text-xl">Perplexity</h3>
+<p>AI powered search engine.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- Newsletter -->
+<section class="bg-slate-900 text-white py-20 text-center">
+
+<h2 class="text-4xl font-bold mb-4">
+Subscribe Newsletter
+</h2>
+
+<p class="mb-6">
+Get AI updates every week.
+</p>
+
+<form id="newsletterForm" class="max-w-md mx-auto flex">
+
+<input
+type="email"
+required
+placeholder="Email Address"
+class="flex-1 px-4 py-3 text-black">
+
+<button
+class="bg-cyan-500 px-6">
+Subscribe
+</button>
+
+</form>
+
+<p id="msg" class="mt-4"></p>
+
+</section>
+
+<!-- About -->
+<section id="about" class="py-16 text-center">
+<h2 class="text-3xl font-bold mb-4">About Us</h2>
+<p class="max-w-3xl mx-auto">
+AI Insights Hub provides tutorials, AI news,
+technology trends and learning resources.
+</p>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-16 bg-gray-200 text-center">
+<h2 class="text-3xl font-bold mb-6">
+Contact Us
+</h2>
+
+<p>Email: contact@aiinsightshub.com</p>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-6">
+<p>© 2026 AI Insights Hub</p>
+</footer>
+
+<script>
+
+// Reading Progress Bar
+window.addEventListener('scroll',()=>{
+
+let winScroll=
+document.body.scrollTop||
+document.documentElement.scrollTop;
+
+let height=
+document.documentElement.scrollHeight-
+document.documentElement.clientHeight;
+
+let scrolled=(winScroll/height)*100;
+
+document.getElementById('progressBar').style.width=
+scrolled+'%';
+
+});
+
+// Newsletter
+document.getElementById('newsletterForm')
+.addEventListener('submit',function(e){
+
+e.preventDefault();
+
+document.getElementById('msg').innerHTML=
+'✅ Successfully Subscribed';
+
+this.reset();
+
+});
+
+// Theme Toggle
+document.getElementById('themeBtn')
+.addEventListener('click',()=>{
+
+document.body.classList.toggle('dark');
+
+});
+
+</script>
+
+</body>
+</html>
